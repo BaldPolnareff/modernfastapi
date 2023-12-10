@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "first-api"
+version = "0.1.0"
+description = ""
+authors = ["BaldPolnareff <baldpolnareff@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytest = "^7.4.3"
+fastapi = {extras = ["all"], version = "^0.104.1"}
+httpx = "^0.25.2"
+bs4 = "^0.0.1"
+colorama = "^0.4.6"
+datamodel-code-generator = "^0.25.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

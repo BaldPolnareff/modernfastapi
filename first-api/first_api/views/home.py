@@ -8,7 +8,7 @@ router = APIRouter()
 
 templates = Jinja2Templates(directory="templates")
 
-router.mount("/static", StaticFiles(directory="static"), name="static")
+# router.mount("/static", StaticFiles(directory="static"), name="static")
 
 @router.get('/')
 async def index(request: Request):

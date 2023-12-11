@@ -4,7 +4,7 @@
 
 from __future__ import annotations
 
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 from pydantic import BaseModel, Field
 
@@ -876,7 +876,11 @@ class Paths(BaseModel):
 
 
 class GeoCodingAPILocation(BaseModel):
-    openapi: str
-    info: Info
-    paths: Paths
+    openapi: str | None = None
+    info: Info | None = None
+    paths: Paths | None = None
     components: Dict[str, Any]
+
+
+
+   

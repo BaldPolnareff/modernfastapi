@@ -4,7 +4,7 @@ from typing import Optional
 class SimpleLocation(BaseModel):
     city: str = Field(..., example="Rome")
     state: Optional[str] = Field(None, example="Lazio")
-    country: str = Field(..., example="IT")
+    country: str = Field(..., example="IT", pattern="^[A-Z]{2}$")
 
 class GeoCodingAPILocation(BaseModel):
     lat: float = Field(..., example=41.902782)

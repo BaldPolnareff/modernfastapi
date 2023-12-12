@@ -10,7 +10,7 @@ templates = Jinja2Templates(directory="templates")
 
 # router.mount("/static", StaticFiles(directory="static"), name="static")
 
-@router.get('/')
+@router.get('/', include_in_schema=False)
 async def index(request: Request):
     return templates.TemplateResponse("home/index.html", {"request": request})
 
